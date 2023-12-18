@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500&display=swap');
+
+textarea {
+    font-family: 'Epilogue', sans-serif;
+    margin: 0;
+    padding:10px;
+}
