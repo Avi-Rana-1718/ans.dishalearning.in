@@ -75,7 +75,7 @@ function QuestionDiv(props) {
             </ul>
             <p>{desc}</p>
             <h4><span>Answer : </span></h4>
-            <p>{answer}</p>
+            <p dangerouslySetInnerHTML={{__html:answer}}></p>
         </article>
         </>
     )
