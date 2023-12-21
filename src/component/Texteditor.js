@@ -77,7 +77,7 @@ function Textarea() {
 
             <textarea id="ans" className="w-full p-1" rows={10} onChange={display}></textarea>
             </div>
-            <div className="w-1/2 p-2 border-solid border-2 border-stone-900 border-l-0" dangerouslySetInnerHTML={{__html: str}}></div>
+            <div className="md:w-1/2 p-2 border-solid border-2 border-stone-900 border-l-0" dangerouslySetInnerHTML={{__html: str}}></div>
             <br />
         </div>
         <button className="p-1 m-0.5 text-white bg-slate-700" onClick={post}>Post</button>
