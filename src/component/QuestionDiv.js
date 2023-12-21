@@ -52,7 +52,6 @@ function QuestionDiv(props) {
         const data = ref(db, 'data/' + id);
         onValue(data, (snapshot) => {
           const data = snapshot.val();
-          console.log(data);
            setQuestion(data.question);
            setAnswer(data.answer);
            setSubject(data.subject);

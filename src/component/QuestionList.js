@@ -29,7 +29,6 @@ function QuestionList() {
         const data = ref(db, 'data');
         onValue(data, (snapshot) => {
           const data = snapshot.val();
-          console.log(data);
             setData(data)
         });
 
