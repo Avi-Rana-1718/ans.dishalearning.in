@@ -66,14 +66,13 @@ function Textarea() {
 
     return (
         <>
-
-        <input id="one" placeholder="Enter question" />
+        <input id="one" className="border-solid border-2 border-stone-900 m-1 p-0.5" placeholder="Enter question" />
         <br />
-        <input id="two" placeholder="subject" />
+        <input id="two" className="border-solid border-2 border-stone-900 m-1 p-0.5" placeholder="subject" />
         <br />
-        <input id="three" placeholder="class" />
+        <input id="three" className="border-solid border-2 border-stone-900 m-1 p-0.5" placeholder="class" />
         <br />
-        <div className="flex p-5">
+        <div className="flex p-0">
             <div className="w-1/2 border-solid border-2 border-stone-900">
             <button className="p-1 m-0.5 text-white bg-slate-700" onClick={bold}>Bold</button>
             <button className="p-1 m-0.5 text-white bg-slate-700"onClick={sup}>Super</button>
@@ -84,8 +83,8 @@ function Textarea() {
             </div>
             <div className="w-1/2 p-2 border-solid border-2 border-stone-900 border-l-0" dangerouslySetInnerHTML={{__html: str}}></div>
             <br />
-        <button onClick={post}>Post</button>
         </div>
+        <button className="p-1 m-0.5 text-white bg-slate-700" onClick={post}>Post</button>
         </>
     )
 }
