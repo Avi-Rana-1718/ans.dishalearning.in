@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Listitem from "./Listitem";
 
-
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase, ref, set, onValue } from "firebase/database";
@@ -38,6 +37,7 @@ function QuestionList() {
 
     return (
         <>
+        <h4 className="text-xl font-medium">Questions: </h4>
         {(()=>{
             let arr=[];
             if(listData!=null) {

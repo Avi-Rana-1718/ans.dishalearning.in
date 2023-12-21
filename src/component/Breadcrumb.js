@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import "./Breadcrumb.css";
+
 function Breadcrumb() {
     return(
         <>
-                <small><Link to="/"><i class="fa-solid fa-house"></i></Link><i class="fa-solid fa-chevron-right"></i>Answers</small>
+        <small className="font-['Epilogue'] m-1 text-sm"><Link to="/"><i class="fa-solid fa-house text-[#0D6EFD] m-1"></i></Link><i class="fa-solid fa-chevron-right m-1"></i>Answers</small>
         </>
     )
 }
