@@ -32,7 +32,7 @@ function QuestionList() {
             setData(data)
         });
 
-    })
+    },[listData])
 
     return (
         <>
