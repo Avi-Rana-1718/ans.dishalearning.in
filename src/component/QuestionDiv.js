@@ -65,14 +65,14 @@ function QuestionDiv(props) {
         <>
         <article className="font-['Epilogue']">
             <Breadcrumb />
-            <h4 className=" text-xl"><span className="font-medium text-[#04AA6D] text-2xl">Question : </span>{question}</h4>
+            <h4 className="mt-2 text-xl"><span className="font-medium text-[#04AA6D] text-xl">Question : </span>{question}</h4>
             <small className="my-1.5">Submitted on <time>{time}</time> | Answered by <u>{author}</u></small>
             <ul className="flex">
                 <li className="text-sm bg-[#F3F6FC] py-1 px-1.5 rounded-2xl shadow-[rgba(0,0,0,0.02)_0px_1px_3px_0px,rgba(27,31,35,0.15)_0px_0px_0px_1px] m-1">{subject}</li>
                 <li className="text-sm bg-[#F3F6FC] py-1 px-1.5 rounded-2xl shadow-[rgba(0,0,0,0.02)_0px_1px_3px_0px,rgba(27,31,35,0.15)_0px_0px_0px_1px] m-1">{standard}</li>
             </ul>
             <p>{desc}</p>
-            <h4 className="mt-4"><span className="text-[#04AA6D] font-medium text-2xl">Answer : </span></h4>
+            <h4 className="mt-4"><span className="text-[#04AA6D] font-medium text-xl">Answer : </span></h4>
             <p className="p-2.5" dangerouslySetInnerHTML={{__html:answer}}></p>
         </article>
         </>
