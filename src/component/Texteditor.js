@@ -72,8 +72,8 @@ function Textarea() {
         <br />
         <input id="three" className="border-solid border-2 border-stone-900 m-1 p-0.5" placeholder="class" />
         <br />
-        <div className="flex p-0">
-            <div className="w-1/2 border-solid border-2 border-stone-900">
+        <div className="md:flex p-0">
+            <div className="md:w-1/2 border-solid border-2 border-stone-900">
             <button className="p-1 m-0.5 text-white bg-slate-700" onClick={bold}>Bold</button>
             <button className="p-1 m-0.5 text-white bg-slate-700"onClick={sup}>Super</button>
             <button className="p-1 m-0.5 text-white bg-slate-700"onClick={sub}>Sub</button>
