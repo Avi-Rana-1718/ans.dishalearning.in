@@ -19,7 +19,6 @@ function Textarea() {
         let finalText = textBefore + "<b></b>" + textAfter;
         setStr(finalText);
         textarea.value = finalText;
-        textarea.focus();
         }
     function sup() {
         let textarea = document.querySelector("textarea");
@@ -29,7 +28,6 @@ function Textarea() {
         let finalText = textBefore + "<sup></sup>" + textAfter;
         setStr(finalText);
         textarea.value = finalText;
-        textarea.focus();
         }
     function sub() {
         let textarea = document.querySelector("textarea");
@@ -39,7 +37,6 @@ function Textarea() {
         let finalText = textBefore + "<sub></sub>" + textAfter;
         setStr(finalText);
         textarea.value = finalText;
-        textarea.focus();
         }
     function block() {
         let textarea = document.querySelector("textarea");
@@ -49,7 +46,6 @@ function Textarea() {
         let finalText = textBefore + "<code></code>" + textAfter;
         setStr(finalText);
         textarea.value = finalText;
-        textarea.focus();
         }
 
         function post() {
