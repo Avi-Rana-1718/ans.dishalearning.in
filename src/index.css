@@ -9,4 +9,7 @@
     body {
         @apply bg-[#E6FFEB]
     }
+    code {
+        @apply bg-[#f0eeee] p-2 mx-1 my-2 rounded block text-[#000]
+    }
 }
