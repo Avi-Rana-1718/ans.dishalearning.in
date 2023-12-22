@@ -59,6 +59,8 @@ function QuestionDiv(props) {
            setTime(data.time);
         });
 
+        document.title = question + " - Disha Learning"
+
     })
 
     return (
