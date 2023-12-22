@@ -7,9 +7,12 @@
 
 @layer base {
     body {
-        @apply bg-[#E6FFEB]
+        @apply bg-[#E6FFEB] min-h-screen 
     }
     code {
         @apply bg-[#f0eeee] p-2 mx-1 my-2 rounded block text-[#000]
+    }
+    #root {
+        @apply min-h-screen h-screen
     }
 }
