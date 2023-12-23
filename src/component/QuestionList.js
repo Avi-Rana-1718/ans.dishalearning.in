@@ -36,7 +36,7 @@ function QuestionList() {
 
     return (
         <>
-        <h4 className="text-xl font-medium">Questions: </h4>
+        <h4 className="text-xl font-bold font-['Epilogue'] my-2">Questions</h4>
         {(()=>{
             let arr=[];
             if(listData!=null) {
