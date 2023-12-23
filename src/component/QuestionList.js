@@ -24,6 +24,7 @@ const db = getDatabase();
 function QuestionList() {
 
     const [listData, setData] = useState([]);
+    
 
     useEffect(()=>{
         const data = ref(db, 'data');

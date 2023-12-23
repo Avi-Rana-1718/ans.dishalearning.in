@@ -65,7 +65,7 @@ function QuestionDiv(props) {
     return (
         <>
         <article className="font-['Epilogue']">
-            <Breadcrumb url="q" />
+            <Breadcrumb />
             <h4 className="mt-2 text-xl"><span className="font-medium text-[#04AA6D] text-xl">Question : </span>{question}</h4>
             <small className="my-1.5">Submitted on <time>{time}</time> | Answered by <u>{author}</u></small>
             <ul className="flex">
