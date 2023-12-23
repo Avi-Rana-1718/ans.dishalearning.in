@@ -50,14 +50,17 @@ function Textarea() {
 
         function post() {
             const db = getDatabase();
-            set(ref(db, 'data/' + (document.querySelector("#one").value).replace(/[^A-Z0-9]/ig, "")), {
+            set(ref(db, 'data/' + ((document.querySelector("#one").value).replace(/[^A-Z0-9]/ig, "")).toLowerCase()), {
              question: document.querySelector("#one").value,
               timestamp: Date.now(),
               subject:  document.querySelector("#two").value,
               class: document.querySelector("#three").value,
               answer: document.querySelector("#ans").value
-            });
-            alert("Posted!")
+            }).catch(err=>{
+                throw err;
+            })
+
+   
         }
 
     return (

@@ -56,7 +56,7 @@ function QuestionDiv(props) {
            setAnswer(data.answer);
            setSubject(data.subject);
            setStandard(data.class);
-           setTime(data.time);
+           setTime(Date(data.time));
         });
 
         document.title = question + " - Disha Learning"
