@@ -63,11 +63,7 @@ function QuestionDiv(props) {
            } else {
             setReport(data.report);
            }
-
-
         });
-
-        document.title = question + " - Disha Learning"
 
     }, [id, question, answer, subject, standard, author, time])
 
@@ -82,6 +78,8 @@ function QuestionDiv(props) {
                 alert(err);
             })
     }
+
+    document.title = question + " - Disha Learning"
 
     return (
         <>
@@ -98,7 +96,7 @@ function QuestionDiv(props) {
 
             <div className="bg-[#F8D7DA] px-4 py-2 my-3 rounded">
             <h4 className="font-medium"> <i class="fa-solid fa-triangle-exclamation"></i> Incorrect answer?</h4>
-            <p className="text-sm">Think the answer is wrong? Report the question & let us know!</p>
+            <p className="text-sm">Think the answer is wrong? Report the answer & let us know!</p>
             <button className="bg-[#58151C] text-[#fff] py-2 px-2 rounded my-3 hover:underline" onClick={reportQuestion}>Report</button>
             </div>
         </article>

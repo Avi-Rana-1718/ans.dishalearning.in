@@ -42,7 +42,7 @@ function QuestionList() {
             let arr=[];
             if(listData!=null) {
                 Object.keys(listData).map(key=>{
-                   return arr.push(<Listitem title={listData[key].question} url={"/answers/" + key} />);
+                   return arr.push(<Listitem title={listData[key].question} url={"/answers/" + key} tag={listData[key].subject} />);
                 })
         }
             return arr;
