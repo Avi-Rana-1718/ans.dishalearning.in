@@ -39,7 +39,7 @@ function QuestionDiv(props) {
 
     const [question, setQuestion] = useState("Undefined");
     const [author, setAuthor] = useState("Vandana Rana");
-    const [time, setTime] = useState("18/12/2023");
+    const [time, setTime] = useState(0);
     const [answer, setAnswer] = useState("Undefined");
 
     const [subject, setSubject] = useState("Undefined");
@@ -57,7 +57,7 @@ function QuestionDiv(props) {
            setAnswer(data.answer);
            setSubject(data.subject);
            setStandard(data.class);
-           setTime(Date(data.time));
+          setTime(new Date(data.timestamp).getDate() + "/" + new Date(data.timestamp).getMonth() + "/" + new Date(data.timestamp).getFullYear());
            if(data.report===undefined) {
             setReport(0)
            } else {
