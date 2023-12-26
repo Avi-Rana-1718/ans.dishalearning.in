@@ -72,6 +72,7 @@ function QuestionDiv(props) {
             update(ref(db, 'data/' + id), {
               report: reportCount+1
             }).then(()=>{
+              
                 alert("Reported");
 
             }).catch(err=>{
@@ -95,7 +96,7 @@ function QuestionDiv(props) {
             <p className="p-2.5" dangerouslySetInnerHTML={{__html:answer}}></p>
 
             <div className="bg-[#F8D7DA] px-4 py-2 my-3 rounded">
-            <h4 className="font-medium"> <i class="fa-solid fa-triangle-exclamation"></i> Incorrect answer?</h4>
+            <h4 className="font-medium">Incorrect answer?</h4>
             <p className="text-sm">Think the answer is wrong? Report the answer & let us know!</p>
             <button className="bg-[#58151C] text-[#fff] py-2 px-2 rounded my-3 hover:underline" onClick={reportQuestion}>Report</button>
             </div>
