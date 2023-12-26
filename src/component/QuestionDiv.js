@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getDatabase, ref, set, onValue } from "firebase/database";
+import { getDatabase, ref, set, update, onValue } from "firebase/database";
 
 import {useParams} from "react-router-dom";
 
@@ -45,6 +45,8 @@ function QuestionDiv(props) {
     const [subject, setSubject] = useState("Undefined");
     const [standard, setStandard] = useState(null);
 
+    const [reportCount, setReport] = useState(0)
+
     useEffect(()=>{
 
 
@@ -56,11 +58,30 @@ function QuestionDiv(props) {
            setSubject(data.subject);
            setStandard(data.class);
            setTime(Date(data.time));
+           if(data.report===undefined) {
+            setReport(0)
+           } else {
+            setReport(data.report);
+           }
+
+
         });
 
         document.title = question + " - Disha Learning"
 
     }, [id, question, answer, subject, standard, author, time])
+
+    function reportQuestion() {
+      const db = getDatabase();
+            update(ref(db, 'data/' + id), {
+              report: reportCount+1
+            }).then(()=>{
+                alert("Reported");
+
+            }).catch(err=>{
+                alert(err);
+            })
+    }
 
     return (
         <>
@@ -74,6 +95,12 @@ function QuestionDiv(props) {
             </ul>
             <h4 className="mt-4"><span className="text-[#04AA6D] font-medium text-xl">Answer : </span></h4>
             <p className="p-2.5" dangerouslySetInnerHTML={{__html:answer}}></p>
+
+            <div className="bg-[#F8D7DA] px-4 py-2 my-3 rounded">
+            <h4 className="font-medium"> <i class="fa-solid fa-triangle-exclamation"></i> Incorrect answer?</h4>
+            <p className="text-sm">Think the answer is wrong? Report the question & let us know!</p>
+            <button className="bg-[#58151C] text-[#fff] py-2 px-2 rounded my-3 hover:underline" onClick={reportQuestion}>Report</button>
+            </div>
         </article>
         </>
     )
