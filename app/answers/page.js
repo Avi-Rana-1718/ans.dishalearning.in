@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Listitem from "@/components/Listitem";
 
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getDatabase, ref, set, onValue } from "firebase/database";
 
 const firebaseConfig = {

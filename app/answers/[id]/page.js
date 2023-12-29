@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase, ref, set, update, onValue } from "firebase/database";
+import Breadcrumb from "@/components/Breadcrumb";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCciV3sOwkss506-379tA5SanyezujbYNA",
@@ -87,7 +88,7 @@ export default function Page (props) {
 
    return (
     <article>
-    {/* <Breadcrumb /> */}
+      <Breadcrumb />
     <h4 className="mt-2 text-xl"><span className="font-medium text-[#04AA6D] text-xl">Question : </span>{question}</h4>
     <small className="my-1.5">Submitted on <time>{time}</time> | Answered by <u>{author}</u></small>
     <ul className="flex">
