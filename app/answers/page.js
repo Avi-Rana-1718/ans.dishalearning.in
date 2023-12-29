@@ -1,5 +1,7 @@
+"use client"
+
 import { useEffect, useState } from "react";
-import Listitem from "./Listitem";
+import Listitem from "@/components/Listitem";
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -16,15 +18,14 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const database = getDatabase();
 
 const db = getDatabase();
 
-function QuestionList() {
 
-    const [listData, setData] = useState([]);
-    
+export default function Answers() {
+
+const [listData, setData] = useState([]);
 
     useEffect(()=>{
         const data = ref(db, 'data');
@@ -37,7 +38,7 @@ function QuestionList() {
 
     return (
         <>
-        <h4 className="text-xl font-bold font-['Epilogue'] my-2">Questions</h4>
+        <h4 className="text-xl font-bold my-2">Questions</h4>
         {(()=>{
             let arr=[];
             if(listData!=null) {
@@ -51,5 +52,3 @@ function QuestionList() {
         </>
     )
 }
-
-export default QuestionList;
