@@ -33,11 +33,11 @@ const [listData, setData] = useState([]);
             setData(data)
         });
 
-    },[listData])
+    },[])
 
     return (
         <>
-        <h4 className="text-xl font-bold my-2">Questions</h4>
+        <h4 className="text-xl font-semibold my-2">Questions</h4>
         {(()=>{
             let arr=[];
             if(listData!=null) {

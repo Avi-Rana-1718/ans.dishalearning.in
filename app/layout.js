@@ -1,5 +1,5 @@
 import './globals.css';
-import NavBar from '/components/Navbar';
+import NavBar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 import { Epilogue } from 'next/font/google'
