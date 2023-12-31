@@ -30,9 +30,8 @@ const [listData, setData] = useState([]);
         const data = ref(db, 'data');
         onValue(data, (snapshot) => {
           const data = snapshot.val();
-            setData(data)
+            setData(data);
         });
-
     },[])
 
     return (
