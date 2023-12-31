@@ -14,10 +14,8 @@ function Footer() {
 
                 <ul className="p-2">
                     <li className="font-medium underline">Resources</li>
-                    <li className="hover:underline"><a href="https://dishalearning.in">About</a></li>
-                    <li className="hover:underline"><a href="https://dishalearning.in">Support</a></li>
-                    <li className="hover:underline"><a href="https://dishalearning.in">Terms</a></li>
-                    <li className="hover:underline"><a href="https://dishalearning.in">Privacy</a></li>
+                    <li className="hover:underline"><a href="/blog/welcome">About</a></li>
+                    <li className="hover:underline"><a href="https://www.termsfeed.com/live/065c588a-b68d-435a-b835-574664b9dac6">Privacy</a></li>
                 </ul>
             </div>
         </footer>
