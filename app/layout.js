@@ -15,6 +15,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
       <script rel="preconnect" src="https://kit.fontawesome.com/c57dc26725.js" crossorigin="anonymous"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2591722971865211"
+     crossorigin="anonymous"></script>
       </head>
       <body className={epilogue.className}>
         <NavBar />
