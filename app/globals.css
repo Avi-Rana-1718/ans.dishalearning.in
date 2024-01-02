@@ -7,10 +7,10 @@
 
 @layer base {
     body {
-        @apply bg-[#E6FFEB] min-h-screen 
+        @apply bg-[#E6FFEB] min-h-screen dark:bg-[#4D5C54]
     }
     code {
-        @apply bg-[#f0eeee] p-2 mx-1 my-2 rounded block text-[#000]
+        @apply bg-[#f0eeee] p-2 mx-1 my-2 rounded block text-[#000] leading-8 dark:bg-[#2d2d2d] dark:text-[#f3f3f3]
     }
     #root {
         @apply min-h-screen h-screen

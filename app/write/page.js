@@ -99,10 +99,10 @@ export default function Page() {
     <h3 className="text-2xl underline decoration-[#04AA6D] decoration-2 font-medium mb-4">Post question</h3>
 
         <label htmlFor="one" className="block">Question</label>
-        <input id="one" className="border-solid border-2 border-neutral-500 rounded p-1 w-full" placeholder="Enter question" />
+        <input id="one" className="border-solid border-2 border-neutral-500 rounded p-1 w-full dark:bg-[#121212]" placeholder="Enter question" />
         <br />
         <label htmlFor="subject" className="block">Subject</label>
-          <select className="border-solid border-2 border-neutral-500 rounded p-1" id="subject">
+          <select className="border-solid border-2 border-neutral-500 rounded p-1 dark:bg-[#121212]" id="subject">
               <option>Physics</option>
               <option>Chemistry</option>
               <option>Biology</option>
@@ -111,7 +111,7 @@ export default function Page() {
           </select>
         <br />
         <label htmlFor="class" className="block">Class</label>
-          <select id="class" className="border-solid border-2 border-neutral-500 rounded p-1">
+          <select id="class" className="border-solid border-2 border-neutral-500 rounded p-1 dark:bg-[#121212]">
               <option>9th</option>
               <option>10th</option>
               <option>11th</option>
@@ -127,7 +127,7 @@ export default function Page() {
             <button className="p-1 m-0.5 text-white bg-slate-700"onClick={block}>Code</button>
             <button className="p-1 m-0.5 text-white bg-slate-700"onClick={nextline}>Br</button>
 
-            <textarea id="ans" className="w-full p-1" rows={10} onChange={display}></textarea>
+            <textarea id="ans" className="w-full p-1 dark:bg-[#404040]" rows={10} onChange={display}></textarea>
             </div>
             <div className="md:w-1/2 p-2 border-solid border-2 border-stone-900 border-l-0 breaks-words" dangerouslySetInnerHTML={{__html: str}}></div>
             <br />

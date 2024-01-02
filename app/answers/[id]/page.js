@@ -72,8 +72,8 @@ await get(child(dbRef, `data/${props.params.id}`)).then((snapshot) => {
     <h4 className="mt-2 text-xl"><span className="font-medium text-[#04AA6D] text-xl">Question : </span><span dangerouslySetInnerHTML={{__html: obj.question}}></span></h4>
     <small className="my-1.5">Submitted on <time>{obj.time}</time> | Answered by <u>{obj.author}</u></small>
     <ul className="flex">
-        <li className="text-sm bg-[#F3F6FC] py-1 px-1.5 rounded-2xl shadow-[rgba(0,0,0,0.02)_0px_1px_3px_0px,rgba(27,31,35,0.15)_0px_0px_0px_1px] m-1">{obj.subject}</li>
-        <li className="text-sm bg-[#F3F6FC] py-1 px-1.5 rounded-2xl shadow-[rgba(0,0,0,0.02)_0px_1px_3px_0px,rgba(27,31,35,0.15)_0px_0px_0px_1px] m-1">{obj.standard}</li>
+        <li className="text-sm bg-[#F3F6FC] dark:bg-[#212124] py-1 px-1.5 rounded-2xl shadow-[rgba(0,0,0,0.02)_0px_1px_3px_0px,rgba(27,31,35,0.15)_0px_0px_0px_1px] m-1">{obj.subject}</li>
+        <li className="text-sm bg-[#F3F6FC] dark:bg-[#212124] py-1 px-1.5 rounded-2xl shadow-[rgba(0,0,0,0.02)_0px_1px_3px_0px,rgba(27,31,35,0.15)_0px_0px_0px_1px] m-1">{obj.standard}</li>
     </ul>
     <h4 className="mt-4"><span className="text-[#04AA6D] font-medium text-xl">Answer : </span></h4>
     <p className="p-2.5" dangerouslySetInnerHTML={{__html: obj.answer}}></p>
