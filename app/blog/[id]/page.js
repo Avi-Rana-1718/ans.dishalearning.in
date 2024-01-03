@@ -2,6 +2,9 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase, ref, child, get } from "firebase/database";
 import Breadcrumb from "@/components/Breadcrumb";
+import { Open_Sans } from 'next/font/google'
+ 
+const opensans = Open_Sans({ subsets: ['latin'] })
 
 const firebaseConfig = {
     apiKey: "AIzaSyCciV3sOwkss506-379tA5SanyezujbYNA",
@@ -67,7 +70,7 @@ await get(child(dbRef, `blog/${props.params.id}`)).then((snapshot) => {
       <Breadcrumb url="/" place="Blog"/>
     <h4 className="mt-2 text-xl" dangerouslySetInnerHTML={{__html: obj.title}}></h4>
     <small className="my-1.5">Posted on <time>{obj.time}</time></small>
-    <p className="p-2.5" dangerouslySetInnerHTML={{__html: obj.content}}></p>
+    <p className={opensans.className} dangerouslySetInnerHTML={{__html: obj.content}}></p>
 </article>
    )
 }
