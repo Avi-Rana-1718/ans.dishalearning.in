@@ -53,7 +53,7 @@ await get(child(dbRef, `blog`)).then((snapshot) => {
         }
     </div>
 
-    <div className="px-4 py-2 my-3 rounded bg-[#f3f3f3] text-left dark:bg-[#2d2d2d]">
+    <div className="px-4 py-2 my-3 rounded bg-[#f3f3f3] text-left dark:bg-[#383838]">
     <small className="text-sm"><i class="fa-solid fa-square-up-right"></i> Head to main website</small>
     <a href="/"><h3 className=" text-lg hover:underline" disabled>Disha Learning</h3></a>
     <a href="/"><button className="bg-[#454545] text-[#fff] py-2 px-2 rounded my-3 hover:underline" disabled>Unavailable <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
