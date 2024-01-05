@@ -20,9 +20,11 @@ export default function RootLayout({ children }) {
       </head>
       <body className={epilogue.className}>
         <NavBar />
-      <main className="bg-white dark:bg-[#2C2C2C] dark:text-[#f3f3f3] min-h-screen m-3 md:!mx-[25vw] shadow-[rgba(0,0,0,0.02)_0px_1px_3px_0px,rgba(27,31,35,0.15)_0px_0px_0px_1px] p-4 rounded-[5px]">
+        <div className='flex justify-center'>
+      <main className="bg-white w-[45vw] dark:bg-[#2C2C2C] dark:text-[#f3f3f3] min-h-screen  m-3 shadow-[rgba(0,0,0,0.02)_0px_1px_3px_0px,rgba(27,31,35,0.15)_0px_0px_0px_1px] p-4 rounded-[5px]">
         {children}
         </main>
+        </div>
         <Footer />
         </body>
     </html>
