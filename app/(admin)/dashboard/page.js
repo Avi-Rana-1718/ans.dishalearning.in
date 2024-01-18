@@ -1,9 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getDatabase, ref, child, get } from "firebase/database";
-import { Open_Sans } from 'next/font/google'
- 
-const opensans = Open_Sans({ subsets: ['latin'] })
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyCciV3sOwkss506-379tA5SanyezujbYNA",
@@ -17,12 +14,9 @@ const firebaseConfig = {
   
   const app = initializeApp(firebaseConfig);
 
-  export const metadata = {
-    title: "Dashboard | Answers - Disha Learning",
-   robots: "noindex"
-  }
 
 export default async function Page() {
+
   let obj;
   const dbRef = ref(getDatabase());
 

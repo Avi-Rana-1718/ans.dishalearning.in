@@ -42,8 +42,6 @@ const [listData, setData] = useState(null);
         <h4 className="text-xl font-semibold my-2">Questions</h4>
         {
             (()=>{
-                console.log(listData)
-
                 let arr=[];
                 if(listData!=null) {
                     Object.keys(listData).sort((a, b)=>{
@@ -55,7 +53,6 @@ const [listData, setData] = useState(null);
                         return 0;
                        }
                     }).map(key=>{
-                        console.log(listData[key]);
                     return arr.push(<Listitem title={listData[key].question} url={"/answers/" + key} />);
                     })
             }

@@ -18,7 +18,6 @@ const firebaseConfig = {
 
 export default function Page() {
 
-
     const [str, setStr] = useState(null);
 
     
@@ -89,7 +88,6 @@ export default function Page() {
             }).catch(err=>{
                 alert(err);
             })
-
    
         }
 
