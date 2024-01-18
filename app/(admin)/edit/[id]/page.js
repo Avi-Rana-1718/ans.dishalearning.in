@@ -90,7 +90,7 @@ onValue(starCountRef, (snapshot) => {
             textarea.value = finalText;
             }
 
-        function edit() {
+       async function edit() {
             const db = getDatabase();
 
               // Get a key for a new Post.
