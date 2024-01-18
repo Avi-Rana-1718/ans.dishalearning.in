@@ -24,7 +24,7 @@ const db = getDatabase();
 
 export default function Answers() {
 
-const [listData, setData] = useState([]);
+const [listData, setData] = useState(null);
 
     useEffect(()=>{
         const data = ref(db, 'data');
@@ -32,20 +32,36 @@ const [listData, setData] = useState([]);
           const data = snapshot.val();
             setData(data);
         });
+
     },[])
+
+    
 
     return (
         <>
         <h4 className="text-xl font-semibold my-2">Questions</h4>
-        {(()=>{
-            let arr=[];
-            if(listData!=null) {
-                Object.keys(listData).map(key=>{
-                   return arr.push(<Listitem title={listData[key].question} url={"/answers/" + key} tag={listData[key].subject} />);
-                })
-        }
-            return arr;
-        })()
+        {
+            (()=>{
+                console.log(listData)
+
+                let arr=[];
+                if(listData!=null) {
+                    Object.keys(listData).sort((a, b)=>{
+                       if(listData[a].timestamp>listData[b].timestamp) {
+                        return -1;
+                       } else  if(listData[a].timestamp<listData[b].timestamp) {
+                        return 0;
+                       } else {
+                        return 0;
+                       }
+                    }).map(key=>{
+                        console.log(listData[key]);
+                    return arr.push(<Listitem title={listData[key].question} url={"/answers/" + key} />);
+                    })
+            }
+                return arr;
+            
+            })()
         }
         </>
     )
