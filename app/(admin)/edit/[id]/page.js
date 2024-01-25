@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react";
-import { getDatabase, ref, set, update, onValue, push, child } from "firebase/database";
+import { getDatabase, ref, update, onValue, push, child } from "firebase/database";
 import { initializeApp } from "firebase/app";
 import { useRouter } from 'next/navigation'
 

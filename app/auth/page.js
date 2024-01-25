@@ -52,11 +52,11 @@ export default function Page() {
         <h3 className="text-2xl underline decoration-[#04AA6D] decoration-2 font-medium mt-4">Authenticate</h3>
       <small className="block mb-4">Login into an existing account.</small>
         <label for="email">Email</label>
-        <input id="email" className="border-solid border-2 border-neutral-500 rounded p-1 w-full dark:bg-[#121212]" placeholder="Email" onChange={(e)=>{
+        <input id="email" autoComplete="off" className="border-solid border-2 border-neutral-500 rounded p-1 w-full dark:bg-[#121212]" placeholder="Email" onChange={(e)=>{
             setEmail(e.target.value);
         }}/>
         <label for="pass">Password</label>
-        <input id="pass" className="border-solid border-2 border-neutral-500 rounded p-1 w-full dark:bg-[#121212]" placeholder="Password" onChange={(e)=>{
+        <input id="pass" autoComplete="off" className="border-solid border-2 border-neutral-500 rounded p-1 w-full dark:bg-[#121212]" placeholder="Password" onChange={(e)=>{
             setPass(e.target.value);
         }}/>
         <br />
