@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, child, get } from "firebase/database";
+import Link from "next/link";
 
 
 const firebaseConfig = {
@@ -33,6 +34,16 @@ await get(child(dbRef, `data`)).then((snapshot) => {
   console.error(error);
 });
     return (
-        <h1>{obj.length} questions</h1>
+      <>
+          <h3 className="text-2xl underline decoration-[#04AA6D] decoration-2 font-medium mb-4">Dashboard</h3>
+      <section className="flex">
+      <div className=" p-3 rounded m-2 bg-[#f3f3f3] text-left dark:bg-[#383838]">
+      <small className="text-sm block">Total questions: {obj.length}</small>
+      </div>
+      <Link href="/answers"><button className="bg-[#f3f3f3] dark:bg-[#383838] dark:text-[#fff]  p-3 rounded m-2 hover:underline">Go to answers <i class="fa-solid fa-arrow-up-right-from-square"></i></button></Link>
+      <Link href="/write"><button className="bg-[#f3f3f3] dark:bg-[#383838] dark:text-[#fff] p-3 rounded m-2 hover:underline">Submit new answer <i class="fa-solid fa-arrow-up-right-from-square"></i></button></Link>
+
+        </section>
+      </>
     )
 }
