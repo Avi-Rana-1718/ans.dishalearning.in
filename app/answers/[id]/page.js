@@ -32,6 +32,8 @@ await get(child(dbRef, `data/${props.params.id}`)).then((snapshot) => {
       openGraph : {
         title: data.question + " | Answers - Disha Learning",
         description: data.answer.replace(/<[^>]*>?/gm, ''),
+        type: "article",
+        url: "https://ans.dishalearning.in/answers/" + props.params.id
       }
     }
   } else {
