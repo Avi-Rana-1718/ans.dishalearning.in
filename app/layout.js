@@ -10,6 +10,8 @@ export const metadata = {
   description: 'Approved answers to all questions!',
 }
 
+export const runtime = "edge";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
