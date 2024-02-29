@@ -5,6 +5,9 @@ import Footer from '@/components/Footer';
 import { Epilogue } from 'next/font/google'
 const epilogue = Epilogue({ subsets: ['latin'] })
 
+
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 export const metadata = {
   title: 'Answers - Disha Learning',
   description: 'Approved answers to all questions!',
