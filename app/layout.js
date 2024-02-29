@@ -10,9 +10,6 @@ export const metadata = {
   description: 'Approved answers to all questions!',
 }
 
-export const runtime = "nodejs";
-export const dynamic = "force-static";
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
