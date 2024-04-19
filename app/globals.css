@@ -12,4 +12,7 @@
     #root {
         @apply min-h-screen h-screen
     }
+    ol > li {
+        list-style-type: decimal;
+    }
 }

@@ -62,8 +62,8 @@ await get(child(dbRef, `data/${props.params.id}`)).then((snapshot) => {
       answer: data.answer,
       subject: data.subject,
       standard: data.class,
-      author: "Vandana Rana",
-      time: (new Date(data.timestamp).getDate() + "/" + new Date(data.timestamp).getMonth() + "/" + new Date(data.timestamp).getFullYear())
+      author: (data.author==undefined)?"Vandana Rana":data.author,
+      time: (new Date(data.timestamp).getDate() + "/" + (new Date(data.timestamp).getMonth()+1) + "/" + new Date(data.timestamp).getFullYear())
     }
   } else {
     console.log("No data available");
