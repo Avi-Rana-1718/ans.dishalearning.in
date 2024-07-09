@@ -78,13 +78,15 @@ export default function Page() {
               timestamp: Date.now(),
               subject:  document.getElementById("subject").value,
               class: document.getElementById("class").value,
-              answer: document.querySelector("#ans").value
+              answer: document.querySelector("#ans").value,
+              chapter: document.querySelector("#chp").value
             }).then(()=>{
                 alert("Posted");
                 document.querySelector("#one").value=null;
                 document.getElementById("subject").value=null;
                 document.getElementById("class").value=null;
                 document.querySelector("#ans").value=null;
+                document.querySelector("#chp").value=null;
             }).catch(err=>{
                 alert(err);
             })
@@ -115,6 +117,9 @@ export default function Page() {
               <option>11th</option>
               <option>12th</option>
           </select>
+        <br />
+        <label htmlFor="chp" className="block">Chapter</label>
+            <input id="chp" type="text"  className="border-solid border-2 border-neutral-500 rounded p-1 w-full dark:bg-[#121212]" placeholder="Enter chapter name" />
         <br />
         <br />
         <div className="md:flex p-0">
